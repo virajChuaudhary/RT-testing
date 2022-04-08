@@ -1,0 +1,32 @@
+---
+---
+
+@charset "utf-8";
+// importing sass
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "core";
+@import "colorvariable";
+@import "bootstrap/bootstrap";
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+@import "fontawesome/light";
+@import "fontawesome/regular";
+@import "typography";
+@import "custom";
+@import "header";
+@import "home";
+@import "about";
+@import "services";
+@import "single-service";
+@import "blog";
+@import "post";
+@import "case-studies";
+@import "single-case-studies";
+@import "faq";
+@import "testimonial";
+@import "contact";
+@import "footer";
+

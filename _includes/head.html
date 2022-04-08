@@ -1,0 +1,44 @@
+<head>
+    <!-- Your Basic Site Informations -->
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="keywords"
+        content="{% if page.meta-keywords %}{{ page.meta-keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="ahrefs-site-verification" content="519a27ed66685f78914f751e75492a3f8e47ac857016ce5547cd801e00c4a16f">
+    <base href="/" />
+    <meta property="og:title"
+        content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta property="og:site_name"
+        content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta property="og:url" content="">
+    <meta property="og:description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="{% if page.social-image %}{{site.baseurl}}{{ page.social-image }}{% else %}{{site.baseurl}}{{ site.social-image }}{% endif %}">
+    {% if page.feature-image %}
+    <meta property="og:image" content="{{site.baseurl}}{{ page.feature-image }}" />
+    {%endif%}
+    <meta name="description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <!-- Mobile Specific Meta -->
+    <link rel="icon" type="image/x-icon" href="{{site.baseurl}}{{site.favicon}}" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/slick/slick-theme.css" />
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" />
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/aos-master/dist/aos.css" />
+    <script src="{{site.baseurl}}/js/jquery-3.js"></script>
+
+    <!-- Stylesheets -->
+
+</head>

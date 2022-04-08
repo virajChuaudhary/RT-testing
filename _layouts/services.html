@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <main id="services">
+        <section class="banner" style="background-image: url({{site.baseurl}}{{page.banner-image}});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12 m-lg-0 m-auto">
+                        <h1>
+                            {{page.banner-heading}}
+                        </h1>
+                        <h6>
+                            {{page.banner-sub-heading | markdownify }}
+                        </h6>
+
+                        {% if page.banner-button-text %}
+                        <a href="{{site.baseurl}}{{page.banner-button-link}}"
+                            class="button ">{{page.banner-button-text}}</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                {% assign Service = site.Services | sort: "order" %}
+                {% for Service in Service %}
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 0 %}
+                <div class="row even servicerow">
+                    <div class="col-lg-6 col-md-10 col-sm-12 col-12 left  order-12 order-sm-12 order-md-12">
+                        <div class="imgwrap">
+                            <div class="cover">
+                                <img src="{{site.baseurl}}{{ Service.card-icon-image }}" alt=" {{Service.title}}">
+                            </div>
+                        </div>
+                        <div class="outerwrap">
+                            <div class="innerwrap">
+                                <h2>
+                                    {{Service.title}}
+                                </h2>
+                                <p>
+                                    {{Service.sub-heading}}
+                                </p>
+
+
+                            </div>
+                            <div  class="description">
+                                {{ Service.short-description | markdownify }}
+                            </div>
+                            <div >
+                                <a href="{{site.baseurl}}{{Service.permalink}}"
+                                    class="arrow-btn">{{Service.button-text}}</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-10 col-sm-12 col-12 right thumbnail-img-cover  order-lg-12">
+                        <img src="{{site.baseurl}}{{Service.card-thumbnail-image}}" alt="{{Service.title}}"
+                            class="img-fluid">
+                    </div>
+
+                </div>
+
+                {% else %}
+                <div class="row  odd servicerow">
+                    <div class="col-lg-5 col-md-10 col-sm-12 col-12 left thumbnail-img-cover ">
+                        <img src="{{site.baseurl}}{{Service.card-thumbnail-image}}" alt="{{Service.title}}"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-md-10 col-sm-12 col-12 right ">
+                        <div class="imgwrap">
+                            <div class="cover">
+                                <img src="{{site.baseurl}}{{ Service.card-icon-image }}" alt=" {{Service.title}}">
+                            </div>
+                        </div>
+                        <div class="outerwrap">
+                            <div class="innerwrap">
+                                <h2>
+                                    {{Service.title}}
+                                </h2>
+                                <p>
+                                    {{Service.sub-heading}}
+                                </p>
+
+
+                            </div>
+                            <div class="description">
+                                {{ Service.short-description | markdownify }}
+                            </div>
+                            <div >
+                                <a href="{{site.baseurl}}{{Service.permalink}}"
+                                    class="arrow-btn">{{Service.button-text}}</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <section class="third-section">
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row row1">
+                                <div class="col-lg-9 col-md-10 col-12 ">
+                                    {% if page.third-section-heading %}
+                                    <h2>
+                                        {{page.third-section-heading}}
+                                    </h2>
+                                    {% endif %}
+                                    {% if page.third-section-sub-heading %}
+                                    <p>
+                                        {{page.third-section-sub-heading}}
+                                    </p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-3 col-md-10 col-12 ">
+                                    {% if page.third-section-button-text %}
+                                    <a href="{{site.baseurl}}{{page.third-section-button-link}}"
+                                        class="button">{{page.third-section-button-text}}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include scripts.html %}
+    <script>
+        jQuery(document).ready(function () {
+            var currentPath = window.location.pathname;
+            //   alert(currentPath);
+            $("header a , footer a").each(function () {
+                var src = $(this).attr("href");
+                if (src.indexOf(currentPath) != -1) {
+                    $(this).parent("li").addClass("active");
+                    $(this).parent("li").siblings().removeClass("active");
+                }
+            });
+        });
+    </script>
+    {% include footer.html %}
+
+</body>
+
+</html>

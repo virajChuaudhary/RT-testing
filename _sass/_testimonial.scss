@@ -1,0 +1,385 @@
+main {
+    &#testimonial {
+        section {
+            &.banner {
+                background-color: $rtpurpleshade;
+                .top-image {
+                    margin-bottom: 18px;
+                }
+                h1 {
+                    margin-bottom: 40px;
+                }
+                .row {
+                    display: flex;
+                    justify-content: space-evenly;
+                    .outerwrap {
+                        max-width: 276px;
+                        min-height: 124px;
+                        border-radius: 4px;
+                        background-color: $white;
+                        box-shadow: 0px 23px 36px 0px #360650;
+                        -webkit-box-shadow: 0px 23px 36px 0px #360650;
+                        -moz-box-shadow: 0px 23px 36px 0px #360650;
+                        padding: 0px 20px;
+                        &.google,
+                        &.Trustpilot {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+
+                            .bottom {
+                                margin-top: 10px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                p {
+                                    padding-bottom: 0;
+                                    margin-bottom: 0;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        &.clutch {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                            .right {
+                                margin-left: 5px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                p {
+                                    padding-bottom: 0;
+                                    margin-bottom: 0;
+                                    margin-top: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.second-section {
+                .testimonialrow {
+                    display: flex;
+                    justify-content: center;
+                    .innerwrap {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $white;
+                        max-width: 510px;
+                        width: 100%;
+                        margin: 0 auto;
+                        border-radius: 5px;
+                        box-shadow: 0px 23px 36px 0px rgba(54, 6, 80, 0.1);
+                        -webkit-box-shadow: 0px 23px 36px 0px rgba(54, 6, 80, 0.1);
+                        -moz-box-shadow: 0px 23px 36px 0px rgba(54, 6, 80, 0.1);
+                        padding: 30px 40px;
+                        margin-bottom: 50px;
+                        .top {
+                            transform: translate(20px, -10px);
+                            img {
+                                max-width: 40px;
+                                max-height: 40px;
+                            }
+                        }
+                        .wraper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            flex-grow: 1;
+
+                            .middle {
+                                position: relative;
+                                p {
+                                    color: $textGrey;
+                                }
+                                &::before {
+                                    position: absolute;
+                                    content: url("/images/quotes.svg");
+                                    top: -45px;
+                                }
+                            }
+                            .bottom {
+                                display: flex;
+                                align-items: center;
+                                margin-top: 25px;
+                                .left {
+                                    margin-right: 18px;
+                                    img {
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                                .right {
+                                    padding-left: 0px;
+                                    p {
+                                        color: $textGrey;
+                                    }
+                                }
+                            }
+                        }
+                        &.main_testimonial_list {
+                            display: none;
+                        }
+                    }
+                }
+                #loadMoretestimonial.no-more {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+                .paginationrow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .pagination_blog {
+                        ul {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            li {
+                                padding-left: 4px;
+                                padding-right: 4px;
+
+                                &.previous,
+                                &.next {
+                                    a {
+                                        color: $rtpurpleshade;
+
+                                        &:after {
+                                            color: $rtpurpleshade;
+                                            font-size: 16px;
+                                            transition: all 0.25s ease-in-out;
+                                        }
+                                    }
+                                }
+                                &.previous {
+                                    margin-right: 10px;
+                                    i {
+                                        margin-right: 5px;
+                                    }
+
+                                    a {
+                                        &:after {
+                                            content: "PREVIOUS";
+                                        }
+                                        &:hover,
+                                        &:active {
+                                            i {
+                                                transform: translateX(-10px);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.next {
+                                    margin-left: 10px;
+                                    i {
+                                        margin-left: 5px;
+                                    }
+
+                                    a {
+                                        &::before {
+                                            content: "NEXT";
+                                        }
+                                        &:hover,
+                                        &:active {
+                                            i {
+                                                transform: translateX(10px);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                a:not(.previous a, .next a) {
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    font-size: 16px;
+                                    color: $textGrey;
+                                    transition: all 0.25s ease-in-out;
+                                    &:hover,
+                                    &:active {
+                                        background: $rtpurpleshade;
+                                        color: $white;
+                                    }
+                                }
+                                &.selected {
+                                    a {
+                                        background: $rtpurpleshade;
+                                        color: $white !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1199.98px) {
+                &.banner {
+                    .row {
+                        .outerwrap {
+                            width: 100%;
+                            min-height: 120px;
+                            padding: 0px 15px;
+                            margin-bottom: 30px;
+                            &.google,
+                            &.Trustpilot {
+                                .bottom {
+                                    margin-top: 10px;
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            &.clutch {
+                                .right {
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.second-section {
+                    .testimonialrow {
+                        .innerwrap {
+                            max-width: 400px;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+            }
+            @media (max-width: 991.98px) {
+                &.banner {
+                    .row {
+                        .outerwrap {
+                            min-width: 45%;
+                            margin-bottom: 20px;
+                            padding: 2px 15px;
+                            img {
+                                transform: scale(0.9);
+                            }
+                            &.google,
+                            &.Trustpilot {
+                                .bottom {
+                                    margin-top: 10px;
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            &.clutch {
+                                .right {
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.second-section {
+                    .testimonialrow {
+                        .innerwrap {
+                            max-width: 100%;
+                        }
+                    }
+                    .paginationrow {
+                        .pagination_blog {
+                            ul {
+                                li {
+                                    padding-left: 4px;
+                                    padding-right: 4px;
+
+                                    &.previous,
+                                    &.next {
+                                        a {
+                                            color: $rtpurpleshade;
+                                            font-size: 14px;
+                                            transition: all 0.25s ease-in-out;
+                                        }
+                                    }
+
+                                    a:not(.previous a, .next a) {
+                                        width: 30px;
+                                        height: 30px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 767px) {
+                &.second-section {
+                    .testimonialrow {
+                        .innerwrap {
+                          
+                            padding: 20px 25px;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 575.98px) {
+            }
+            @media (max-width: 475.98px) {
+                &.banner {
+                    img {
+                        transform: scale(0.8);
+                    }
+                    .row {
+                        .outerwrap {
+                            min-width: 80%;
+
+                            img {
+                                transform: scale(0.8);
+                            }
+                            &.google,
+                            &.Trustpilot {
+                                .bottom {
+                                    margin-top: 10px;
+
+                                    p {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                            &.clutch {
+                                .right {
+                                    p {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.second-section {
+                    .testimonialrow {
+                        .innerwrap {
+                            .top {
+                                transform: translate(10px, -10px);
+                                img {
+                                    transform: scale(0.8);
+
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            @media (max-width: 375.98px) {
+            }
+        }
+    }
+}

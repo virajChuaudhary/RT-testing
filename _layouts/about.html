@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <main id="about">
+        <section class="banner" style="background-image: url({{site.baseurl}}{{page.banner-image}});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-md-10 col-sm-12 col-12 m-lg-0 m-auto">
+                        <h1>
+                            {{page.banner-heading}}
+                        </h1>
+                        <h6>
+                            {{page.banner-sub-heading | markdownify }}
+                        </h6>
+
+                        {% if page.banner-button-text %}
+                        <a href="{{site.baseurl}}{{page.banner-button-link}}"
+                            class="button ">{{page.banner-button-text}}</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-10 col-sm-12 col-12 left m-lg-0 m-auto">
+                        <img src="{{site.baseurl}}{{page.second-section-left-image}}"
+                            alt="{{page.second-section-left-image-alt}}">
+                    </div>
+                    <div class="col-lg-7 col-md-10 col-sm-12 col-12 right m-lg-0 m-auto">
+                        {% if page.second-section-right-heading %}
+                        <h3>
+                            {{ page.second-section-right-heading }}
+                        </h3>
+                        {% endif %}
+
+                        {% if page.second-section-right-description %}
+                        {{ page.second-section-right-description | markdownify }}
+                        {% endif %}
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="third-section">
+            <div class="container-fluid bgshade">
+                <div class="row top-row text-center">
+                    <div class="col-md-7 col-sm-8 col-12 m-auto">
+                        {% if page.third-section-heading %}
+                        <h2>
+                            {{ page.third-section-heading }}
+                        </h2>
+                        {% endif %}
+                        {% if page.third-section-sub-heading %}
+                        {{ page.third-section-sub-heading | markdownify }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-11 col-sm-12 col-12 m-auto">
+                        <div class="container">
+
+                            <div class="row center-row">
+                                <div
+                                    class="col-lg-7 col-md-12 order-lg-1 order-md-12 order-sm-12 order-12 col-12 left ticklist">
+                                    {% if page.third-section-row-1-left-text-heading %}
+                                    <h6>
+                                        {{ page.third-section-row-1-left-text-heading }}
+                                        </h2>
+                                        {% endif %}
+                                        {{page.third-section-row-1-left-text | markdownify}}
+                                        <div class="btn-wrap">
+                                            {% if page.third-section-row-1-left-button-text %}
+                                            <a href="{{site.baseurl}}{{page.third-section-row-1-left-button-link}}"
+                                                class="arrow-btn">{{page.third-section-row-1-left-button-text}}</a>
+                                            {% endif %}
+
+                                        </div>
+                                </div>
+                                <div
+                                    class="col-lg-5 col-md-12 col-12 right text-lg-right text-md-left order-lg-12 order-md-1 order-sm-1 order-1">
+                                    <img src="{{site.baseurl}}{{page.third-section-row-1-right-image}}"
+                                        alt="  {{page.third-section-heading}}">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="forth-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-12 m-auto">
+                        <div class="container">
+                            <div class="row row1">
+                                <div class="col-12 text-center">
+                                    {% if page.forth-section-heading %}
+                                    <h2>
+                                        {{page.forth-section-heading}}
+
+                                    </h2>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="row row2">
+
+                                <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 left m-lg-0 m-auto">
+                                    <img src="{{site.baseurl}}{{page.forth-section-row-1-left-image}}"
+                                        alt="{{page.forth-section-row-1-right-heading}}" class="img-fluid">
+                                </div>
+                                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12 right m-lg-0 m-auto">
+                                    {% if page.forth-section-row-1-right-heading %}
+                                    <h5>
+                                        {{page.forth-section-row-1-right-heading}}
+                                    </h5>
+                                    {% endif %}
+                                    {{page.forth-section-row-1-right-text | markdownify}}
+                                </div>
+                            </div>
+                            <div class="row row3">
+                                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12 left m-lg-0 m-auto ">
+                                    {% if page.forth-section-row-2-left-heading %}
+                                    <h5>
+                                        {{page.forth-section-row-2-left-heading}}
+                                    </h5>
+                                    {% endif %}
+                                    {{page.forth-section-row-2-left-text | markdownify}}
+                                </div>
+                                <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 right  m-lg-0 m-auto   order-1 order-sm-1 order-md-12">
+                                    <img src="{{site.baseurl}}{{page.forth-section-row-2-right-image}}"
+                                        alt="{{page.forth-section-row-2-left-heading}}" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row btn-row">
+                                <div class="col-12">
+                                    {% if page.forth-section-button-text %}
+                                    <a href="{{site.baseurl}}{{page.forth-section-button-link}}"
+                                        class="button m-auto">{{page.forth-section-button-text}}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="fifth-section" id="counter">
+            <div class="container">
+                <div class="row counterrow">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-8 ">
+                        <div class="countcard">
+                            <div>
+                                <p class="count h1 plus" data-count="{{page.fifth-section-card-1-value}}">0</p>
+                            </div>
+                            <p class="countertitle">{{page.fifth-section-card-1-title}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-8 ">
+                        <div class="countcard">
+                            <div>
+                                <p class="count h1 plus" data-count="{{page.fifth-section-card-2-value}}">0</p>
+                            </div>
+                            <p class="countertitle">{{page.fifth-section-card-2-title}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-8 ">
+                        <div class="countcard">
+                            <div>
+                                <p class="count h1 plus" data-count="{{page.fifth-section-card-3-value}}">0</p>
+                            </div>
+                            <p class="countertitle">{{page.fifth-section-card-3-title}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-8 ">
+                        <div class="countcard">
+                            <div>
+                                <p class="count h1 plus" data-count="{{page.fifth-section-card-4-value}}">0</p>
+                            </div>
+                            <p class="countertitle">{{page.fifth-section-card-4-title}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {% include our-latest-blog.html %}
+    </main>
+
+
+
+
+    {% include scripts.html %}
+    <script>
+        jQuery(document).ready(function () {
+            var currentPath = window.location.pathname;
+            //   alert(currentPath);
+            $("header a , footer a").each(function () {
+                var src = $(this).attr("href");
+                if (src.indexOf(currentPath) != -1) {
+                    $(this).parent("li").addClass("active");
+                    $(this).parent("li").siblings().removeClass("active");
+                }
+            });
+        });
+    </script>
+    {% include footer.html %}
+
+</body>
+
+</html>

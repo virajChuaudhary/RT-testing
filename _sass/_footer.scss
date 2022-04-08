@@ -1,0 +1,208 @@
+footer {
+    background-color: $rtlightpurpleshade;
+    padding-bottom: 30px;
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+    .row {
+        &.top-row {
+            padding-top: 58px;
+            padding-bottom: 48px;
+            display: flex;
+            align-items: flex-start;
+            .footer-link {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                a {
+                    color: $blackshade3;
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-family: "Avenir";
+                    font-weight: 400;
+                    &:hover,
+                    &:active {
+                        color: $rtpurpleshade;
+                    }
+                }
+
+                &.active {
+                    a {
+                        font-weight: 800;
+                        color: $rtpurpleshade;
+                    }
+                }
+            }
+            .col1 {
+                img {
+                    width: auto;
+                }
+                .social-links {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-basis: 100%;
+                    max-width: 119.08px;
+
+                    .link {
+                        margin: auto 8px;
+                        border-radius: 50%;
+                        border: 1px solid $rtblueshade;
+                        transition: all 0.3s ease-in-out;
+                        span {
+                            width: 28px;
+                            height: 28px;
+                            display: flex;
+                            flex-basis: 25%;
+                            justify-content: center;
+                            align-items: center;
+                            i {
+                                font-size: 16px;
+                                color: $rtpurpleshade;
+                            }
+                        }
+                        &:hover,
+                        &:active {
+                            background-color: $rtpurpleshade;
+
+                            span {
+                                width: 28px;
+                                height: 28px;
+                                display: flex;
+                                flex-basis: 25%;
+                                justify-content: center;
+                                align-items: center;
+                                i {
+                                    font-size: 16px;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .lastcol {
+                .wrap {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    span {
+                        margin-right: 16px;
+                        width: 21px;
+                    }
+                    a {
+                        font-size: 16px;
+                        line-height: 28px;
+                        font-weight: 400;
+                        font-family: "Avenir";
+                        color: $blackshade3;
+                        &:hover,
+                        &:active {
+                            color: $rtpurpleshade;
+                        }
+                    }
+                    &.address,
+                    &.email,
+                    &.phone {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        word-break: break-all;
+                        p {
+                            margin-bottom: 0px;
+
+                            flex-basis: 80%;
+                        }
+                    }
+                }
+            }
+        }
+        &.bottom-row {
+            padding-top: 30px;
+            border-top: 1px solid $bordershade;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p,
+            span {
+                color: $blackshade3;
+                opacity: 0.6;
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: 400;
+                font-family: "Avenir";
+                margin-bottom: 0px;
+            }
+            a {
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: 400;
+                font-family: "Avenir";
+                color: $blackshade3;
+                opacity: 0.6;
+                &:hover,
+                &:active {
+                    color: $rtpurpleshade;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199.98px) {
+    }
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 991.98px) {
+        .row {
+            &.top-row {
+                .footer-link {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+                .col1 {
+                    margin-bottom: 20px;
+                    img {
+                        width: auto;
+                    }
+                    .social-links {
+                        margin-top: 15px;
+                    }
+                }
+                .lastcol {
+                    margin-top: 0px;
+                    .wrap {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        span {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+    }
+    @media (max-width: 575.98px) {
+        .row {
+            &.top-row {
+                .col1 {
+                    margin-bottom: 25px;
+                }
+                .lastcol {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    @media (max-width: 475.98px) {
+    }
+    @media (max-width: 375.98px) {
+    }
+}
