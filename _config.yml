@@ -86,8 +86,8 @@ email: viraj.chaudhary@apexure.com
 description: Recruitment and Business Solutions - Built on Intelligence and driven
   by Passion
 meta-keywords: 
-baseurl: "/RT-testing"
-url: https://virajchuaudhary.github.io
+baseurl: "/"
+url: http://rt-testing.siteleaf.net
 favicon: "/images/favicon.svg"
 footer-phone-number: "+1 (888) 797-8728"
 footer-email: infohr@recruittalent.com
