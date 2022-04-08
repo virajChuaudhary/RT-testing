@@ -1,6 +1,7 @@
 ---
 title: Customer Testimonial
 permalink: "/testimonial/"
+position: 3
 layout: testimonials
 banner-heading: Customer Testimonial
 banner-image: 

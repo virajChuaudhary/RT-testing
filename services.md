@@ -1,6 +1,7 @@
 ---
 title: Services
 permalink: "/services/"
+position: 4
 layout: services
 description: Our Services
 social-image: "/images/social-image.png"

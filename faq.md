@@ -1,6 +1,7 @@
 ---
 title: Frequently Asked Questions
 permalink: "/faq/"
+position: 6
 layout: faq
 description: Frequently Asked Questions
 social-image: "/images/social-image.png"

@@ -1,6 +1,7 @@
 ---
 title: About
 permalink: "/about/"
+position: 5
 layout: about
 description: About Recruit Talent
 social-image: "/images/social-image.png"

@@ -1,5 +1,6 @@
 ---
 title: Recruit Talent
+position: 1
 description: Recruitment and Business Solutions - Built on Intelligence and driven
   by Passion
 social-image: "/images/social-image.png"

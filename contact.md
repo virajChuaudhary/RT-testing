@@ -1,6 +1,7 @@
 ---
 title: Get In Touch
 permalink: "/contact/"
+position: 0
 layout: contact
 description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
