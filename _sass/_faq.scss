@@ -1,0 +1,300 @@
+main {
+    &#faq {
+        section {
+            &.banner {
+                background: $rtpurpleshade;
+            }
+            &.second-section {
+                padding-bottom: 0px;
+                .row1 {
+                    display: flex;
+
+                    align-items: flex-start;
+                    .left {
+                        border-right: 1px solid #d2d2d2;
+                        max-width: 320px;
+                        padding-bottom: 40px;
+
+                        h5 {
+                            padding-bottom: 25px;
+                            width: fit-content;
+                            border-bottom: 1px solid #d2d2d2;
+                        }
+                        ul.links {
+                            li {
+                                margin-top: 30px;
+                                a {
+                                    font-size: 18px;
+                                    color: $textGrey;
+                                    &:hover {
+                                        color: $rtpurpleshade;
+                                    }
+                                }
+                                &.activated {
+                                    a {
+                                        color: $rtpurpleshade;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right {
+                        &.faq_col {
+                            .faq {
+                                max-width: auto;
+                                cursor: pointer;
+                            }
+                            h2 {
+                                margin-bottom: 50px;
+                            }
+
+                            .faq.active {
+                                .answer {
+                                    max-height: 351px;
+                                    animation: fade 0.25s ease-in-out;
+                                    margin-bottom: 40px;
+                                }
+
+                                img {
+                                    transform: rotate(180deg);
+                                }
+                            }
+
+                            img {
+                                transition: transform 0.25s ease-in;
+                            }
+
+                            .question {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 37px;
+                                h5 {
+                                    font-weight: 400;
+                                }
+                            }
+
+                            .answer {
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: max-height 0.5s ease;
+                                width: 96%;
+                            }
+
+                            @keyframes fade {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(-15px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                            }
+                        }
+                        .outerwrap {
+                            display: none;
+                            &.activated {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            &.third-section {
+                padding-top: 90px;
+                padding-bottom: 90px;
+                .row1 {
+                    background-color: $rtpurpleshade;
+                    display: flex;
+                    align-items: center;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    padding-right: 60px;
+                    padding-left: 30px;
+                    h2 {
+                        color: $white;
+                        margin-bottom: 19px;
+                    }
+                    p {
+                        color: $white;
+                    }
+                    .button {
+                        margin-left: auto;
+                    }
+                }
+            }
+            @media (max-width: 1199.98px) {
+                &.second-section {
+                    .row1 {
+                        .left {
+                            max-width: 100%;
+                            ul.links {
+                                li {
+                                    margin-top: 25px;
+                                }
+                            }
+                        }
+                        .right {
+                            padding-left: 50px;
+                            &.faq_col {
+                                h2 {
+                                    margin-bottom: 30px;
+                                }
+
+                                .faq.active {
+                                    .answer {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+
+                                .question {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+            }
+            @media (max-width: 991.98px) {
+                &.second-section {
+                    .row1 {
+                        .left {
+                            border-right: 0px;
+                            max-width: max-content;
+                            padding-bottom: 0px;
+                            margin-bottom: 0px;
+                            h5 {
+                                width: fit-content;
+                            }
+                            ul.links {
+                                border-bottom: 1px solid #d2d2d2;
+                                padding-bottom: 40px;
+                                li {
+                                    margin-top: 25px;
+                                    a {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            padding-left: 15px;
+
+                            &.faq_col {
+                                h2 {
+                                    margin-bottom: 25px;
+                                }
+
+                                .faq.active {
+                                    .answer {
+                                        margin-bottom: 25px;
+                                    }
+                                }
+
+                                .question {
+                                    margin-bottom: 25px;
+                                }
+                            }
+                            .outerwrap {
+                                margin-top: 30px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                &.third-section {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    .row1 {
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+                        padding-right: 25px;
+                        padding-left: 25px;
+                        h2 {
+                            margin-bottom: 20px;
+                        }
+
+                        .button {
+                            margin-top: 15px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 767px) {
+                &.second-section {
+                    .row1 {
+                        .left {
+                            ul.links {
+                                padding-bottom: 30px;
+                                li {
+                                    margin-top: 20px;
+                                    a {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            padding-left: 15px;
+
+                            &.faq_col {
+                                h2 {
+                                    margin-bottom: 15px;
+                                }
+
+                                .faq.active {
+                                    .answer {
+                                        margin-bottom: 15px;
+                                    }
+                                }
+
+                                .question {
+                                    margin-bottom: 15px;
+                                    img {
+                                        width: 25px;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                            .outerwrap {
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                }
+                &.third-section {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    .row1 {
+                        background-color: $rtpurpleshade;
+                        display: flex;
+                        align-items: center;
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        h2 {
+                            margin-bottom: 15px;
+                        }
+
+                        .button {
+                            margin-top: 15px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 575.98px) {
+            }
+            @media (max-width: 475.98px) {
+            }
+            @media (max-width: 375.98px) {
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <main id="single-services">
+        <section class="banner" style="background-image: url({{site.baseurl}}{{page.banner-image}});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12 m-lg-0 m-auto">
+                        <h1>
+                            {{page.title}}
+                        </h1>
+                        <h6>
+                            {{page.sub-heading | markdownify }}
+                        </h6>
+
+                        {% if page.banner-button-text %}
+                        <a href="{{site.baseurl}}{{page.banner-button-link}}"
+                            class="button ">{{page.banner-button-text}}</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="container">
+                <div class="row row1">
+                    <div class=" col-xl-5 col-lg-5 col-md-10 col-sm-12 col-12 left m-lg-0 m-auto">
+                        <img src="{{site.baseurl}}{{page.second-section-left-image}}"
+                            alt="{{page.second-section-left-image-alt}}">
+                    </div>
+                    <div class="col-lg-7 col-md-10 col-sm-12 col-12 right ticklist m-lg-0 m-auto">
+                        {% if page.second-section-right-heading %}
+                        <h3>
+                            {{ page.second-section-right-heading }}
+                        </h3>
+                        {% endif %}
+
+                        {% if page.second-section-right-description %}
+                        {{ page.second-section-right-description | markdownify }}
+                        {% endif %}
+
+                        {% if page.second-section-button-text %}
+                        <a href="{{site.baseurl}}{{page.second-section-button-link}}"
+                            class="button">{{page.second-section-button-text}}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="third-section">
+            <div class="container">
+                <div class="row row1 ">
+                    <div class="col-12 text-center">
+                        {% if page.third-section-heading %}
+                        <h2>
+                            {{page.third-section-heading}}
+                        </h2>
+                        {% endif %}
+                    </div>
+
+                </div>
+                <div class="row row2">
+                    {% for logo in page.third-section-client-company-logos%}
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 wraper">
+                        <div class="imgcover">
+                            <img src="{{site.baseurl}}{{logo}}" alt="{{page.third-section-heading}}" class="img-fluid">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="fifth-section testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {% if page.testimonial-section-top-image %}
+                        <img src="{{site.baseurl}}{{page.testimonial-section-top-image}}"
+                            alt="{{page.testimonial-section-heading}}">
+                        {% endif %}
+                        {% if page.testimonial-section-heading %}
+                        <h2>
+                            {{page.testimonial-section-heading}}
+                        </h2>
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="row row2">
+                    <div class="col-md-12 wocswrap">
+                        <ul id="wocs">
+
+                            {% assign wocs = site.testimonials %}
+                            {% for wocs in wocs %}
+                            {% if wocs.is-visible-on-home-page == true %}
+                            <li>
+                                <div class="innerwrap">
+                                    <div class="top text-right">
+                                        {% case wocs.review-platform-name %}
+                                        {% when 'google' %}
+                                        <img src="{{site.baseurl}}/images/google.svg"
+                                            alt="{{ wocs.review-platform-name}}" class="ml-auto">
+                                        {% when 'Trustpilot' %}
+                                        <img src="{{site.baseurl}}/images/Trustpilot.svg"
+                                            alt="{{ wocs.review-platform-name}}" class="ml-auto">
+                                        {% when 'clutch' %}
+                                        <img src="{{site.baseurl}}/images/clutch.svg"
+                                            alt="{{ wocs.review-platform-name}}" class="ml-auto">
+                                        {% else %}
+
+                                        {% endcase %}
+                                    </div>
+                                    <div class="middle">
+                                        {{wocs.description}}
+
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left">
+                                            <img src="{{site.baseurl}}{{wocs.client-image}}" alt="{{wocs.client-name}}">
+                                        </div>
+                                        <div class="right">
+                                            <p>
+                                                {{wocs.client-name}}
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </li>
+                            {% endif%}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    {% include scripts.html %}
+    <script>
+        jQuery(document).ready(function () {
+            $('.ourService').parent("li").addClass('active');
+            $('.ourService').parent("li").siblings().removeClass("active");
+
+        });
+    </script>
+    {% include footer.html %}
+
+</body>
+
+</html>
