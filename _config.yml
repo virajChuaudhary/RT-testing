@@ -1,6 +1,5 @@
 ---
 title: Recrut Talent
-<<<<<<< HEAD
 email: viraj.chaudhary@apexure.com
 description: >-
   Recruitment and Business Solutions - Built on Intelligence and driven by Passion
@@ -15,9 +14,7 @@ footer-address: "RecruitTalent
   8565 Sudley Rd, Suite C
   Manassas, VA 20110, USA"
 # collections
-=======
 timezone: UTC
->>>>>>> ba9a9575ac26902d69e1a373f1bddf4a29e3ca6c
 collections:
   case-studies:
     title: Case Studies
