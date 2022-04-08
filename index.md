@@ -5,10 +5,10 @@ description: Recruitment and Business Solutions - Built on Intelligence and driv
 social-image: "/images/social-image.png"
 banner-image: "/images/home-banner.png"
 banner-heading: Recruitment and Business Solutions - Built on Intelligence and driven
-  by Passion -2
+  by Passion.
 banner-sub-heading: 'Leveraging innovation, intelligence and driven by Passion to
   identify, select, and source exceptional talent to fulfil business needs using a
-  Comprehensive Recruitment Process  '
+  Comprehensive Recruitment Process. '
 banner-button-text: GET IN TOUCH
 banner-button-link: "/contact/"
 second-section-left-image: "/images/home-section-2-left.png"
