@@ -1,6 +1,3 @@
----
----
-
 /**
  * A simple JSON search
  * Requires jQuery (v 1.7+)
@@ -14,7 +11,7 @@
     Initialisation
     ========================================================================== */
 
-var q, jsonFeedUrl = "{{ site.baseurl }}/feed.json",
+var q, jsonFeedUrl = "//feed.json",
   $searchForm = $("[data-search-form]"),
   $searchInput = $("[data-search-input]"),
   $resultTemplate = $("#search-result"),
