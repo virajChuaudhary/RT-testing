@@ -1,8 +1,7 @@
 ---
 title: Recruit Talent
-layout: home
-description: Recruitment and Business Solutions - Built on Intelligence and driven
-  by Passion
+description: 'Recruitment and Business Solutions - Built on Intelligence and driven
+  by '
 social-image: "/images/social-image.png"
 banner-image: "/images/home-banner.png"
 banner-heading: Recruitment and Business Solutions - Built on Intelligence and driven
@@ -42,5 +41,6 @@ fifth-section-heading: What Our Clients Say
 latest-blog-section-heading: Our Latest Blog
 latest-blog-section-button-text: VIEW ALL POSTS
 latest-blog-section-button-link: "/blog/"
+layout: home
 ---
 
