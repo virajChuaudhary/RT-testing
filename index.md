@@ -1,11 +1,11 @@
 ---
 title: Recruit Talent
-description: 'Recruitment and Business Solutions - Built on Intelligence and driven
-  by '
+description: Recruitment and Business Solutions - Built on Intelligence and driven
+  by Passion
 social-image: "/images/social-image.png"
 banner-image: "/images/home-banner.png"
-banner-heading: Recruitment and Business Solutions - Built on Intelligence and driven
-  by Passion
+banner-heading: 'Recruitment and Business Solutions - Built on Intelligence and driven
+  by '
 banner-sub-heading: 'Leveraging innovation, intelligence and driven by Passion to
   identify, select, and source exceptional talent to fulfil business needs using a
   Comprehensive Recruitment Process  '
