@@ -1,0 +1,260 @@
+main {
+    &#blog {
+        section {
+            &.second-section {
+                padding-top: 0px;
+                .postwraper {
+                    transform: translateY(-220px);
+                    margin-bottom: -220px !important;
+                    background-color: $white;
+                    padding: 40px 40px;
+                    border-radius: 5px;
+                    box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                    -webkit-box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                    -moz-box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                    .postrow {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 60px;
+
+                        .img {
+                            img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                                border-radius: 4px;
+                            }
+                        }
+                        .content {
+                            .top {
+                                .seperator {
+                                    width: 1px;
+                                    height: 21px;
+                                    margin-right: 10px;
+                                    margin-left: 10px;
+                                    border: 0.5px solid #707070;
+                                    background: #707070;
+                                }
+                            }
+                            h5 {
+                                margin-bottom: 15px;
+                            }
+                            .arrow-btn {
+                                margin-top: 26px;
+                            }
+                        }
+                        &.main_blog_list {
+                            display: none;
+                        }
+                    }
+                    .paginationrow {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .pagination_blog {
+                            ul {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                li {
+                                    padding-left: 4px;
+                                    padding-right: 4px;
+
+                                    &.previous,
+                                    &.next {
+                                        a {
+                                            color: $rtpurpleshade;
+
+                                            &:after {
+                                                color: $rtpurpleshade;
+                                                font-size: 16px;
+                                                transition: all 0.25s ease-in-out;
+                                            }
+                                        }
+                                    }
+                                    &.previous {
+                                        margin-right: 10px;
+                                        i {
+                                            margin-right: 5px;
+                                        }
+
+                                        a {
+                                            &:after {
+                                                content: "PREVIOUS";
+                                            }
+                                            &:hover,
+                                            &:active {
+                                                i {
+                                                    transform: translateX(-10px);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.next {
+                                        margin-left: 10px;
+                                        i {
+                                            margin-left: 5px;
+                                        }
+
+                                        a {
+                                            &::before {
+                                                content: "NEXT";
+                                            }
+                                            &:hover,
+                                            &:active {
+                                                i {
+                                                    transform: translateX(10px);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    a:not(.previous a, .next a) {
+                                        width: 32px;
+                                        height: 32px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        font-size: 16px;
+                                        color: $textGrey;
+                                        transition: all 0.25s ease-in-out;
+                                        &:hover,
+                                        &:active {
+                                            background: $rtpurpleshade;
+                                            color: $white;
+                                        }
+                                    }
+                                    &.selected {
+                                        a {
+                                            background: $rtpurpleshade;
+                                            color: $white !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #loadMore.no-more {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+
+            @media (max-width: 1199.98px) {
+            }
+            @media (max-width: 1024px) {
+            }
+            @media (max-width: 991.98px) {
+                &.second-section {
+                    .postwraper {
+                        transform: translateY(-240px);
+                        margin-bottom: -240px !important;
+                        padding: 40px 20px;
+                        padding-bottom: 60px;
+                        .postrow {
+                            margin-bottom: 50px;
+
+                            .img {
+                                img {
+                                    margin-bottom: 20px;
+                                    height: 40vh;
+                                }
+                            }
+                            .content {
+                                h5 {
+                                    margin-bottom: 10px;
+                                }
+                                .arrow-btn {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                        .paginationrow {
+                            .pagination_blog {
+                                ul {
+                                    li {
+                                        padding-left: 4px;
+                                        padding-right: 4px;
+
+                                        &.previous,
+                                        &.next {
+                                            a {
+                                                color: $rtpurpleshade;
+                                                font-size: 14px;
+                                                transition: all 0.25s ease-in-out;
+                                            }
+                                        }
+
+                                        a:not(.previous a, .next a) {
+                                            width: 30px;
+                                            height: 30px;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 767px) {
+            }
+            @media (max-width: 575.98px) {
+            }
+            @media (max-width: 475.98px) {
+                &.second-section {
+                    .postwraper {
+                        transform: translateY(-250px);
+                        margin-bottom: -250px !important;
+                        padding: 15px 0px;
+                        .postrow {
+                            margin-bottom: 50px;
+
+                            .img {
+                                img {
+                                    margin-bottom: 20px;
+                                    height: 40vh;
+                                }
+                            }
+                            .content {
+                                h5 {
+                                    margin-bottom: 10px;
+                                }
+                                .arrow-btn {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                        .paginationrow {
+                            .pagination_blog {
+                                ul {
+                                    li {
+                                        &.previous {
+                                            a {
+                                                &:after {
+                                                    content: "";
+                                                }
+                                            }
+                                        }
+                                        &.next {
+                                            a {
+                                                &::before {
+                                                    content: "";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 375.98px) {
+            }
+        }
+    }
+}

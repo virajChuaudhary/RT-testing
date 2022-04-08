@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <main id="testimonial">
+        <section class="banner">
+            <div class="container">
+                <div class="col-xl-6 col-lg-6 col-md-10 col-sm-10 col-12 text-center m-auto">
+                    {% if page.banner-top-image %}
+                    <img src="{{site.baseurl}}{{page.banner-top-image}}" alt="5stars" class="top-image">
+                    {% endif %}
+                    {% if page.banner-heading%}
+                    <h1>{{page.banner-heading}}</h1>
+                    {% endif %}
+                    {% if page.banner-subheading %}
+                    <p>{{page.banner-subheading | markdownify }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-xl-10 col-lg-12 col-12 m-auto">
+                    <div class="container">
+                        <div class="row row1">
+                            <div class="col-xl-4 col-md-4 google outerwrap">
+                                <div class="top">
+                                    <img src="{{site.baseurl}}{{page.google-stars}}" alt="5stars">
+                                </div>
+                                <div class="bottom">
+                                    <img src="{{site.baseurl}}{{page.google-logo}}" alt="google">
+                                    <p>{{page.google-reviews}}</p>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-4 col-md-4 Trustpilot outerwrap">
+                                <div class="top">
+                                    <img src="{{site.baseurl}}{{page.Trustpilot-logo}}" alt="Trustpilot">
+                                </div>
+                                <div class="bottom">
+                                    <img src="{{site.baseurl}}{{page.Trustpilot-stars}}" alt="5stars">
+
+                                    <p>{{page.Trustpilot-reviews}}</p>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-4 col-md-4 clutch outerwrap">
+                                <div class="left">
+                                    <img src="{{site.baseurl}}{{page.clutch-logo}}" alt="google">
+                                </div>
+                                <div class="right">
+                                    <img src="{{site.baseurl}}{{page.clutch-stars}}" alt="5stars">
+                                    <p>{{page.clutch-reviews}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-12 col-lg-12 col-md-10 col-sm-12 col-11 m-auto   ">
+                        <div class="container">
+
+
+                            <div class="row testimonialrow">
+                                {% for testimonials in site.testimonials %}
+
+                                <div
+                                    class="col-xl-6 col-lg-6 col-md-12  col-sm-12 col-12 innerwrap main_testimonial_list">
+
+                                    <div class="top text-right">
+                                        {% case testimonials.review-platform-name %}
+                                        {% when 'google' %}
+                                        <img src="{{site.baseurl}}/images/google.svg"
+                                            alt="{{ testimonials.review-platform-name}}" class="ml-auto">
+                                        {% when 'Trustpilot' %}
+                                        <img src="{{site.baseurl}}/images/Trustpilot.svg"
+                                            alt="{{ testimonials.review-platform-name}}" class="ml-auto">
+                                        {% when 'clutch' %}
+                                        <img src="{{site.baseurl}}/images/clutch.svg"
+                                            alt="{{ testimonials.review-platform-name}}" class="ml-auto">
+                                        {% else %}
+
+                                        {% endcase %}
+                                    </div>
+                                    <div class="wraper">
+                                        <div class="middle">
+                                            {{testimonials.description}}
+
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="left">
+                                                <img src="{{site.baseurl}}{{testimonials.client-image}}"
+                                                    alt="{{testimonials.client-name}}">
+                                            </div>
+                                            <div class="right">
+                                                <p>
+                                                    {{testimonials.client-name}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+                                {% endfor %}
+
+                               
+                                    <div class="col-md-12">
+                                        <div class="mid_btn">
+                                            <a href="#" id="loadMoretestimonial" class="button m-auto diagnol-btn">Load More</a>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+
+
+                            <!-- <div class="row paginationrow">
+                                <div class="pagination_blog">
+                                    <ul>
+                                        {% if paginator.previous_page %}
+                                        <li class="previous">
+                                            <a href="{{ paginator.previous_page_path  | prepend: site.baseurl | replace: '//', '/' }}"
+                                                class="arrow pre"><i class="far fa-long-arrow-left"></i> </a>
+                                        </li>
+                                        {% endif %}
+
+                                        {% if paginator.page_trail %}
+                                        {% for trail in paginator.page_trail %}
+                                        <li {% if page.url==trail.path %}class="selected" {% endif %}>
+
+                                            <a href="{{ trail.path | prepend: site.baseurl  | remove: " index.html" }}"
+                                                title="{{trail.title}}">{{ trail.num }}</a>
+
+                                        </li>
+                                        {% endfor %}
+                                        {% endif %}
+
+
+                                        {% if paginator.next_page %}
+                                        <li class="next">
+                                            <a href="{{ paginator.next_page_path  | prepend: site.baseurl | replace: '//', '/'  }}"
+                                                class="arrow"><i class="far fa-long-arrow-right"></i></a>
+                                        </li>
+                                        {% endif %}
+
+
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+    {% include scripts.html %}
+    <script>
+        jQuery(document).ready(function () {
+            var currentPath = window.location.pathname;
+            //   alert(currentPath);
+            $("header a , footer a").each(function () {
+                var src = $(this).attr("href");
+                if (src.indexOf(currentPath) != -1) {
+                    $(this).parents("li").addClass("active");
+                    $(this).parents("li").siblings().removeClass("active");
+                }
+            });
+
+
+            
+        });
+    </script>
+    {% include footer.html %}
+
+</body>
+
+</html>

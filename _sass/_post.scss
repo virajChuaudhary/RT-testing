@@ -1,0 +1,271 @@
+main {
+    &.post {
+        section {
+            &.second-section {
+                padding-top: 0px;
+                padding-bottom: 30px;
+                .postwraper {
+                    padding: 0px;
+                    max-width: 786px !important;
+                    transform: translateY(-220px);
+                    margin-bottom: -220px !important;
+                    background-color: $white;
+                    padding: 40px 40px;
+                    padding-top: 0px;
+                    border-radius: 5px;
+                    box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                    -webkit-box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                    -moz-box-shadow: 0px 53px 76px 0px rgba(62, 64, 140, 0.05);
+                }
+                .share-row {
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .share-col {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p {
+                            margin: 0px;
+                            padding: 0px;
+                            margin-right: 6px;
+                        }
+                        ul {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0px;
+                            li {
+                                margin: auto 5px;
+                                a {
+                                    width: 33px;
+                                    height: 33px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: $white;
+                                    font-size: 16px;
+                                    transition: all 0.25s ease-in-out;
+                                    &.facebook {
+                                        background-color: #3b5998;
+                                    }
+                                    &.linkedin {
+                                        background-color: #007bb5;
+                                    }
+                                    &.twitter {
+                                        background-color: #55acee;
+                                    }
+                                    &:hover,
+                                    &:active {
+                                        background-color: $rtblueshade;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .author-row {
+                    margin-top: 80px;
+                    .container {
+                        .row {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .left {
+                                background-color: #fcfaff;
+                                border-radius: 4px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                img {
+                                    max-width: 70px;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: auto;
+                                    margin-bottom: 7px;
+                                }
+                                p {
+                                    text-align: center;
+                                    &.name {
+                                        font-weight: 800;
+                                        padding-bottom: 0px;
+                                        margin-bottom: 3px;
+                                    }
+                                    &.designation {
+                                        font-size: 12px;
+                                        padding-bottom: 0px;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                                .socialShare {
+                                    ul {
+                                        display: flex;
+                                        justify-content: space-around;
+                                        align-items: center;
+                                        flex-direction: row;
+                                        li {
+                                            margin: auto 3px;
+                                            a {
+                                                width: 27px;
+                                                height: 27px;
+                                                border-radius: 50%;
+                                                background-color: #c3c3c3;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                color: $white;
+                                                font-size: 13px;
+                                                transition: all 0.25s ease-in-out;
+                                                &:hover,
+                                                &:active {
+                                                    background-color: $rtpurpleshade;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .right {
+                                padding-left: 15px;
+                                h5 {
+                                    margin-top: 0px;
+                                    margin-bottom: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form-row {
+                    background-color: $rtpurpleshade;
+                    border-radius: 4px;
+                    margin-top: 60px;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    h2 {
+                        color: $white;
+                    }
+                }
+            }
+
+            @media (max-width: 1199.98px) {
+                &.second-section {
+                    padding-top: 0px;
+                    padding-bottom: 30px;
+                    .postwraper {
+                        padding: 0px;
+                        max-width: 100% !important;
+                        padding: 30px 20px;
+                        padding-top: 10px;
+                    }
+                    .share-row {
+                        margin-top: 30px;
+                    }
+                    .author-row {
+                        margin-top: 60px;
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+            }
+            @media (max-width: 991.98px) {
+                &.second-section {
+                    .postwraper {
+                        transform: translateY(-240px);
+                        margin-bottom: -240px !important;
+                        padding: 40px 20px;
+                        padding-bottom: 60px;
+                        padding-top: 10px;
+                    }
+
+                    .author-row {
+                        .container {
+                            .row {
+                                .left {
+                                    padding: 10px;
+                                    margin-bottom: 10px;
+                                }
+                                .right {
+                                    text-align: center;
+                                    padding-left: 15px;
+                                    h5 {
+                                        margin-top: 0px;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .form-row {
+                        background-color: $rtpurpleshade;
+                        border-radius: 4px;
+                        margin-top: 60px;
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                        h2 {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 767px) {
+                &.second-section {
+                    .postwraper {
+                        .postrow {
+                            .col-12 {
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 575.98px) {
+                &.second-section {
+                    .postwraper {
+                        transform: translateY(-250px);
+                        margin-bottom: -250px !important;
+                        padding: 15px 0px;
+                        padding-top: 0px;
+                        .postrow {
+                            .col-12 {
+                                padding: 15px;
+                                padding-top: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .share-row {
+                        margin-top: 10px;
+                        .share-col {
+                            flex-direction: column;
+
+                            p {
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+
+                    .form-row {
+                        background-color: $rtpurpleshade;
+                        border-radius: 4px;
+                        margin-top: 40px;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        h2 {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 475.98px) {
+            }
+            @media (max-width: 375.98px) {
+            }
+        }
+    }
+}
