@@ -1,18 +1,5 @@
 ---
 title: Recrut Talent
-email: viraj.chaudhary@apexure.com
-description: >-
-  Recruitment and Business Solutions - Built on Intelligence and driven by Passion
-meta-keywords:
-baseurl: "/"
-url: "http://rt-testing.siteleaf.net"
-favicon: "/images/favicon.svg"
-footer-phone-number: +1 (888) 797-8728
-footer-email: infohr@recruittalent.com
-footer-address: "RecruitTalent
-  8565 Sudley Rd, Suite C
-  Manassas, VA 20110, USA"
-# collections
 timezone: UTC
 collections:
   case-studies:
