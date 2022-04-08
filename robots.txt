@@ -1,1 +1,1 @@
-Sitemap: https://rt-testing.siteleaf.net/sitemap.xml
+Sitemap: http://rt-testing.siteleaf.net/sitemap.xml
