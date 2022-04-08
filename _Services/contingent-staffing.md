@@ -1,32 +1,35 @@
 ---
-layout: single-service
 title: Contingent Staffing
+permalink: contingent-staffing
+layout: single-service
 description: Leader in the Staffing Industry
-sub-heading: "Leader in the Staffing Industry"
-short-description: |-
- **RecruitTalent** leverages its mature, quality-certified processes to provide a variety of standard and customized solutions and programs to help clients optimize their supply chain and optimize their turnaround time (TAT). RecruitTalent's workforce solutions help clients increase efficiency, accelerate project progress, cut costs, and ultimately enhance their competitive edge.
-social-image:
-permalink: "contingent-staffing"
+sub-heading: Leader in the Staffing Industry
+short-description: "**RecruitTalent** leverages its mature, quality-certified processes
+  to provide a variety of standard and customized solutions and programs to help clients
+  optimize their supply chain and optimize their turnaround time (TAT). RecruitTalent's
+  workforce solutions help clients increase efficiency, accelerate project progress,
+  cut costs, and ultimately enhance their competitive edge."
+social-image: 
 card-icon-image: "/images/contingent-staffing.svg"
 card-thumbnail-image: "/images/contingent-staffing-thumbnail.png"
 button-text: LEARN MORE
 is-visible-on-home-page: true
 order: 1
 banner-image: "/images/contingent-staffing-banner.png"
-banner-button-text: "GET STARTED"
+banner-button-text: GET STARTED
 banner-button-link: "/contact/"
 second-section-left-image: "/images/contingent-staffing-section-2-left.png"
 second-section-left-image-alt: 
 second-section-right-heading: 
-second-section-right-description: |- 
- **RecruitTalent** leverages its mature, quality-certified processes to provide a variety of standard and customized solutions and programs to help clients optimize their supply chain and optimize their turnaround time (TAT). RecruitTalent's workforce solutions help clients increase efficiency, accelerate project progress, cut costs, and ultimately enhance their competitive edge.
+second-section-right-description: |-
+  **RecruitTalent** leverages its mature, quality-certified processes to provide a variety of standard and customized solutions and programs to help clients optimize their supply chain and optimize their turnaround time (TAT). RecruitTalent's workforce solutions help clients increase efficiency, accelerate project progress, cut costs, and ultimately enhance their competitive edge.
 
- **RecruitTalent** offers profound knowledge, comprehensive market analysis, and exceptional customer service to guarantee maximized workforce solutions in providing specialized staffing services.
+  **RecruitTalent** offers profound knowledge, comprehensive market analysis, and exceptional customer service to guarantee maximized workforce solutions in providing specialized staffing services.
 
- **At RecruitTalent,** we assist small as well as large business enterprises in filling hard-to-find roles at 60% lower cost compared to our competitors. With seasoned professionals, we dedicate a recruitment team to find the right people, with the right skills, for the right job and exceed the expectations of the client within the specified time frame.
-second-section-button-text: "GET STARTED"
-second-section-button-link: "/contact/" 
-third-section-heading: Our Clients Used This Service 
+  **At RecruitTalent,** we assist small as well as large business enterprises in filling hard-to-find roles at 60% lower cost compared to our competitors. With seasoned professionals, we dedicate a recruitment team to find the right people, with the right skills, for the right job and exceed the expectations of the client within the specified time frame.
+second-section-button-text: GET STARTED
+second-section-button-link: "/contact/"
+third-section-heading: Our Clients Used This Service
 third-section-client-company-logos:
 - "/images/circle.svg"
 - "/images/hexa.svg"
@@ -34,5 +37,6 @@ third-section-client-company-logos:
 - "/images/yourlogo.svg"
 - "/images/dummies.svg"
 testimonial-section-top-image: "/images/5stars.svg"
-testimonial-section-heading: "What Our Clients Say"
+testimonial-section-heading: What Our Clients Say
 ---
+
